@@ -54,7 +54,7 @@ class Worker:
         # spread tasks over workers in case of many
         channel.basic_qos(prefetch_count=1)
 
-        channel.basic_consume(queue='task_queue', on_message_callback=self.callback)
+        channel.basic_consume(queue=self.queue, on_message_callback=self.callback)
         channel.start_consuming()
 
 
