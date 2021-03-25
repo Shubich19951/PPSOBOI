@@ -80,5 +80,9 @@ class Worker:
 
 if __name__ == '__main__':
     args = init_args()
-    w = Worker(args.host, args.rabbit_login, args.rabbit_password, args.queue, args.buffer_size, args.mongo_uri, args.mongo_db, args.mongo_collection)
+    w = Worker(
+        args.host, args.rabbit_login, args.rabbit_password, 
+        args.queue, args.buffer_size, 
+        args.mongo_uri, args.mongo_db, args.mongo_collection
+    )
     w.run()
