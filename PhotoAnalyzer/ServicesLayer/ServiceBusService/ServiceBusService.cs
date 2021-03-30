@@ -11,22 +11,23 @@ namespace ServicesLayer.ServiceBusService
     public class ServiceBusService : IServiceBusService
     {
         private readonly IConfiguration _configuration;
+        private string _connectionString;
+        private string _queueName;
 
         public ServiceBusService(IConfiguration configuration)
         {
             _configuration = configuration;
+            _connectionString = _configuration.GetValue<string>("serviceBusConnection");
+            _queueName = _configuration.GetValue<string>("queueName");
         }
 
         public async Task<bool> SendMessage(AnalyzeResult analyzeResult)
         {
             try
             {
-                var connectionString = _configuration.GetValue<string>("serviceBusConnection");
-                var queueName = _configuration.GetValue<string>("queueName");
-
-                await using (ServiceBusClient client = new ServiceBusClient(connectionString))
+                await using (ServiceBusClient client = new ServiceBusClient(_connectionString))
                 {
-                    ServiceBusSender sender = client.CreateSender(queueName);
+                    ServiceBusSender sender = client.CreateSender(_queueName);
 
                     analyzeResult.PhotoId = Guid.NewGuid().ToString().Split("-")[0];
 

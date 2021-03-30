@@ -9,8 +9,8 @@ namespace Test
 {
     public class ServiceBusServiceTest
     {
-        private readonly string serviceBusConnection = "Endpoint=sb://photo-azalyzer-servicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=tsY1/oRIBALDf+LfFW1VMTnt3E1xnAkXzKUIRT9sTXU=";
-        private readonly string queueName = "result-queue";
+        private readonly string _connectionString = "Endpoint=sb://photo-azalyzer-servicebus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=tsY1/oRIBALDf+LfFW1VMTnt3E1xnAkXzKUIRT9sTXU=";
+        private readonly string _queueName = "result-queue";
         private IServiceBusService _serviceBusService;
 
         [SetUp]
@@ -19,10 +19,10 @@ namespace Test
             var configuration = new Mock<IConfiguration>();
 
             var serviceBusConnectionSection = new Mock<IConfigurationSection>();
-            serviceBusConnectionSection.Setup(a => a.Value).Returns(serviceBusConnection);
+            serviceBusConnectionSection.Setup(a => a.Value).Returns(_connectionString);
 
             var queueNameSection = new Mock<IConfigurationSection>();
-            queueNameSection.Setup(a => a.Value).Returns(queueName);
+            queueNameSection.Setup(a => a.Value).Returns(_queueName);
 
             configuration.Setup(a => a.GetSection("serviceBusConnection")).Returns(serviceBusConnectionSection.Object);
             configuration.Setup(a => a.GetSection("queueName")).Returns(queueNameSection.Object);
