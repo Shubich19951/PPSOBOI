@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoAnalyzer", "PhotoAnalyzer\PhotoAnalyzer.csproj", "{E79820D4-300C-41C1-8ABB-7F24AC5736E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesLayer", "ServicesLayer\ServicesLayer.csproj", "{37C0EBC1-4AFF-49FE-9CE5-B9E8ADEF9E9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{06DA2B82-6E82-4F3B-8444-BF7B06CAF599}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E79820D4-300C-41C1-8ABB-7F24AC5736E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E79820D4-300C-41C1-8ABB-7F24AC5736E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E79820D4-300C-41C1-8ABB-7F24AC5736E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E79820D4-300C-41C1-8ABB-7F24AC5736E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37C0EBC1-4AFF-49FE-9CE5-B9E8ADEF9E9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37C0EBC1-4AFF-49FE-9CE5-B9E8ADEF9E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37C0EBC1-4AFF-49FE-9CE5-B9E8ADEF9E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37C0EBC1-4AFF-49FE-9CE5-B9E8ADEF9E9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06DA2B82-6E82-4F3B-8444-BF7B06CAF599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06DA2B82-6E82-4F3B-8444-BF7B06CAF599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06DA2B82-6E82-4F3B-8444-BF7B06CAF599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06DA2B82-6E82-4F3B-8444-BF7B06CAF599}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE63D518-28B6-4978-BA68-40CDE8F245D4}
+	EndGlobalSection
+EndGlobal
